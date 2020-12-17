@@ -1,0 +1,7 @@
+export const GET_IMAGES = "IMAGES/GET_IMAGES";
+export const RECEIVE_IMAGES = "IMAGES/RECEIVE_IMAGES";
+export const SET_LIKE = "IMAGES/SET_LIKE";
+export const DELETE_LIKE = "IMAGES/DELETE_LIKE";
+
+export const RECEIVE_USER = "USER/RECEIVE_USER";
+export const USER_LOGGING = "USER/USER_LOGGING";
