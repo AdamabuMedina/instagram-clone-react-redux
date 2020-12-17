@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14931352-af89-4284-85c7-4fa76df284f1" name="Default Changelist" comment="Первоначальная настройка приложения">
-      <change afterPath="$PROJECT_DIR$/src/services/httpService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/imageService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/likeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/likeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608182549089</updated>
       <workItem from="1608182557600" duration="7633000" />
+      <workItem from="1608233112277" duration="335000" />
     </task>
     <task id="LOCAL-00001" summary="Первоначальная настройка приложения">
       <created>1608188144245</created>
@@ -78,6 +72,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Первоначальная настройка приложения" />
