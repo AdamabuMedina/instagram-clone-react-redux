@@ -10,7 +10,7 @@ class App extends Component {
     previousLocation = this.props.location;
 
     componentWillUpdate(nextProps) {
-        const {location} = this.props;
+        const { location } = this.props;
         if (
             nextProps.history.action !== "POP" &&
             (!location.state || !location.state.modal)
@@ -20,27 +20,27 @@ class App extends Component {
     }
 
     render() {
-        const {location} = this.props
+        const { location } = this.props;
         const isModal = !!(
             location.state &&
             location.state.modal &&
             this.previousLocation !== location
-        )
+        );
         return (
             <React.Fragment>
-                <ToastContainer/>
-                <Header/>
+                <ToastContainer />
+                <Header />
                 <main className="container py-5">
                     <Switch location={isModal ? this.previousLocation : location}>
-                        <Route path="/" exact component={Images}/>
-                        <Route path="/not-found" component={PageNotFound}/>
-                        <Redirect to="/not-found"/>
+                        <Route path="/" exact component={Images} />
+                        <Route path="/not-found" component={PageNotFound} />
+                        <Redirect to="/not-found" />
                     </Switch>
                     {isModal ? <Route path="/image/:id" component={ImagesDetail} /> : null}
                 </main>
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default withRouter(App)
+export default withRouter(App);

@@ -1,6 +1,6 @@
-import axios from "axios"
-import {toast} from "react-toastify";
-import {accessKey} from "../config.json"
+import axios from "axios";
+import { toast } from "react-toastify";
+import { accessKey } from "../config.json";
 
 axios.interceptors.response.use(null, error => {
     const expectedError =
@@ -14,7 +14,7 @@ axios.interceptors.response.use(null, error => {
         toast.error("Превышен лимит запросов к API.");
 
     return Promise.reject(error);
-})
+});
 
 export const setAuthHeader = token => {
     axios.defaults.headers.Authorization = token
@@ -26,4 +26,4 @@ export default {
     get: axios.get,
     post: axios.post,
     delete: axios.delete
-}
+};

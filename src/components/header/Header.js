@@ -4,16 +4,27 @@ import tokenKey from "../../config.json"
 import InstagramIcon from "../../services/svg";
 import auth from "../../services/authService";
 
-const Header = ({user}) => {
+const NavBar = ({user}) => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <Link to="/" className="navbar-brand">
+        <nav className="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+            <div className="container">
+                <Link className="navbar-brand d-flex align-items-center" to="/">
                     <InstagramIcon/>
                 </Link>
-                <div className="navbar-nav ml-auto">
-                    {
-                        user.id && (
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbar"
+                    aria-controls="navbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"/>
+                </button>
+                <div className="collapse navbar-collapse" id="navbar">
+                    <div className="navbar-nav ml-auto">
+                        {user.id && (
                             <div className="d-flex py-3 py-sm-0">
                                 <img
                                     className="rounded-circle mr-2"
@@ -24,7 +35,7 @@ const Header = ({user}) => {
                                 />
                                 <span className="navbar-text">{user.name}</span>
                                 <button
-                                    className="btn btn-dark btn-lg"
+                                    className="btn btn-outline-light ml-auto ml-sm-4"
                                     onClick={() => {
                                         localStorage.removeItem(tokenKey);
                                         window.location = "/";
@@ -33,28 +44,28 @@ const Header = ({user}) => {
                                     Выйти
                                 </button>
                             </div>
-                        )
-                    }
-                    {!user.id && (
-                        <div className="d-flex py-3 py-sm-0">
-                            <button
-                                className="btn btn-dark btn-lg"
-                                onClick={() => {
-                                    window.location = auth.getAuthUrl();
-                                }}
-                            >
-                                Войти
-                            </button>
-                        </div>
-                    )}
+                        )}
+                        {!user.id && (
+                            <div className="d-flex py-3 py-sm-0">
+                                <button
+                                    className="btn btn-outline-light ml-auto ml-sm-4"
+                                    onClick={() => {
+                                        window.location = auth.getAuthUrl();
+                                    }}
+                                >
+                                    Войти
+                                </button>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </nav>
-    )
-}
+    );
+};
 
 const mapStateToProps = state => ({
     user: state.user.authUser
-})
+});
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps)(NavBar);

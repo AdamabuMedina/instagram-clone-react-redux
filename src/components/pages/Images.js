@@ -11,24 +11,24 @@ import Like from "../likes/Like";
 class Images extends Component {
     state = {
         currentPage: 1
-    }
+    };
 
-    SCROLL_OFFSET = 80
+    SCROLL_OFFSET = 80;
 
     componentDidMount() {
-        if (!this.props.isLogging) this.props.fetchImages()
-        window.addEventListener("scroll", this.handleScroll)
+        if (!this.props.isLoggingIn) this.props.fetchImages();
+        window.addEventListener("scroll", this.handleScroll);
     }
 
     componentDidUpdate(prevProps, state) {
-        if (prevProps.isLogging !== this.props.isLogging)
-            this.props.fetchImages()
+        if (prevProps.isLoggingIn !== this.props.isLoggingIn)
+            this.props.fetchImages();
     }
 
     handleScroll = () => {
-        const {isLoading, lastPage, fetchImages} = this.props
-        if (isLoading || lastPage <= this.props.currentPage) return
-        const lastCard = document.querySelector(".image:last-child")
+        const {isLoading, lastPage, fetchImages} = this.props;
+        if (isLoading || lastPage <= this.state.currentPage) return;
+        const lastCard = document.querySelector(".image:last-child");
         const lastCardOffset = lastCard.offsetTop + lastCard.clientHeight;
         const pageOffset = window.pageYOffset + window.innerHeight;
         if (pageOffset > lastCardOffset - this.SCROLL_OFFSET) {
@@ -39,12 +39,12 @@ class Images extends Component {
                 () => fetchImages(this.state.currentPage)
             );
         }
-    }
+    };
 
     isImageLiked = imageId => {
-        const image = this.props.images.find(i => i.id === imageId)
-        return image.liked_by_user
-    }
+        const image = this.props.images.find(i => i.id === imageId);
+        return image.liked_by_user;
+    };
 
     handleLike = imageId => {
         if (!this.props.user) {
@@ -53,10 +53,10 @@ class Images extends Component {
         }
         if (this.isImageLiked(imageId)) this.props.deleteLike(imageId);
         else this.props.setLike(imageId);
-    }
+    };
 
     render() {
-        const {images, isLoading} = this.props
+        const {images, isLoading} = this.props;
         return (
             <React.Fragment>
                 <Masonry className="row">
@@ -110,7 +110,7 @@ class Images extends Component {
                 </Masonry>
                 {isLoading && <Loader/>}
             </React.Fragment>
-        )
+        );
     }
 }
 
@@ -120,11 +120,11 @@ const mapStateToProps = state => {
         isLoading: state.images.isLoading,
         lastPage: state.images.lastPage,
         user: !!state.user.authUser.id,
-        isLogging: state.user.isLogging
-    }
-}
+        isLoggingIn: state.user.isLoggingIn
+    };
+};
 
 export default connect(
     mapStateToProps,
     {fetchImages, setLike, deleteLike}
-)(Images)
+)(Images);

@@ -1,9 +1,9 @@
-import {RECEIVE_USER, USER_LOGGING} from "../actions/types";
+import { RECEIVE_USER, USER_LOGGING_IN } from "../actions/types";
 
 const initialState = {
     authUser: {},
-    isLogging: false
-}
+    isLoggingIn: false
+};
 
 const user = (state = initialState, action) => {
     switch (action.type) {
@@ -11,16 +11,16 @@ const user = (state = initialState, action) => {
             return {
                 ...state,
                 authUser: action.user,
-                isLogging: false
-            }
-        case USER_LOGGING:
+                isLoggingIn: false
+            };
+        case USER_LOGGING_IN:
             return {
                 ...state,
-                isLogging: true
-            }
+                isLoggingIn: true
+            };
         default:
-            return state
+            return state;
     }
-}
+};
 
-export default user
+export default user;

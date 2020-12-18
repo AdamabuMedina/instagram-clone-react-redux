@@ -1,4 +1,4 @@
-import Modal from "react-responsive-modal";
+import { Modal } from 'react-responsive-modal';
 import {connect} from "react-redux";
 import {Component} from "react";
 import Like from "../likes/Like";
@@ -7,7 +7,7 @@ class ImagesDetail extends Component {
     handleCloseModal = event => {
         event.stopPropagation();
         this.props.history.goBack();
-    }
+    };
 
     render() {
         const {image} = this.props;
@@ -19,7 +19,8 @@ class ImagesDetail extends Component {
                     closeButton: {cursor: "pointer", outline: "none"}
                 }}
                 open
-                onClose={this.handleCloseModal}>
+                onClose={this.handleCloseModal}
+            >
                 <div className="d-flex flex-wrap align-items-center mt-4 mb-2 image-detail">
                     <img
                         className="rounded-circle mr-3"
@@ -34,6 +35,7 @@ class ImagesDetail extends Component {
                     >
                         {image.user.name}
                     </a>
+
                     <Like
                         liked={image.liked_by_user}
                         likeCount={image.likes}
@@ -46,7 +48,7 @@ class ImagesDetail extends Component {
                     alt={image.user.name}
                 />
             </Modal>
-        )
+        );
     }
 }
 
@@ -55,6 +57,6 @@ const imageSelector = (state, ownProps) =>
 
 const mapStateToProps = (state, ownProps) => ({
     image: imageSelector(state, ownProps)
-})
+});
 
-export default connect(mapStateToProps)(ImagesDetail)
+export default connect(mapStateToProps)(ImagesDetail);
