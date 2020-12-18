@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14931352-af89-4284-85c7-4fa76df284f1" name="Default Changelist" comment="Первоначальная настройка приложения">
-      <change afterPath="$PROJECT_DIR$/src/reducers/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/userReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/httpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/httpService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/imagesReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +56,7 @@
       <updated>1608182549089</updated>
       <workItem from="1608182557600" duration="7633000" />
       <workItem from="1608233112277" duration="5123000" />
-      <workItem from="1608249231449" duration="1870000" />
+      <workItem from="1608249231449" duration="2577000" />
     </task>
     <task id="LOCAL-00001" summary="Первоначальная настройка приложения">
       <created>1608188144245</created>
@@ -94,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608249636504</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="изменения в actions, создание reduser user и так же store">
+      <created>1608251234456</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608251234456</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +117,7 @@
     <MESSAGE value="Начало верстки user" />
     <MESSAGE value="Исправление ошибок по сборке приложения (auth, user)" />
     <MESSAGE value="action User and Images refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="action User and Images refactor" />
+    <MESSAGE value="изменения в actions, создание reduser user и так же store" />
+    <option name="LAST_COMMIT_MESSAGE" value="изменения в actions, создание reduser user и так же store" />
   </component>
 </project>
