@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import {Link} from "react-router-dom";
+import {connect} from "react-redux";
 import tokenKey from "../../config.json"
 import InstagramIcon from "../../services/svg";
 import auth from "../../services/authService";
 
-const Header = ({ user }) => {
+const Header = ({user}) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link to="/" className="navbar-brand d-flex align-items-center">
-                <InstagramIcon />
-            </Link>
-            <div className="collapse navbar-collapse" id="navbar">
+            <div className="container-fluid">
+                <Link to="/" className="navbar-brand">
+                    <InstagramIcon/>
+                </Link>
                 <div className="navbar-nav ml-auto">
                     {
                         user.id && (
@@ -24,7 +24,7 @@ const Header = ({ user }) => {
                                 />
                                 <span className="navbar-text">{user.name}</span>
                                 <button
-                                    className="btn btn-outline-light ml-auto ml-sm-4"
+                                    className="btn btn-dark btn-lg"
                                     onClick={() => {
                                         localStorage.removeItem(tokenKey);
                                         window.location = "/";
@@ -38,7 +38,7 @@ const Header = ({ user }) => {
                     {!user.id && (
                         <div className="d-flex py-3 py-sm-0">
                             <button
-                                className="btn btn-outline-light ml-auto ml-sm-4"
+                                className="btn btn-dark btn-lg"
                                 onClick={() => {
                                     window.location = auth.getAuthUrl();
                                 }}

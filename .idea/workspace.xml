@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14931352-af89-4284-85c7-4fa76df284f1" name="Default Changelist" comment="Первоначальная настройка приложения">
-      <change afterPath="$PROJECT_DIR$/src/reducers/imagesReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/svg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
       <updated>1608182549089</updated>
       <workItem from="1608182557600" duration="7633000" />
       <workItem from="1608233112277" duration="5123000" />
-      <workItem from="1608249231449" duration="2577000" />
+      <workItem from="1608249231449" duration="3330000" />
     </task>
     <task id="LOCAL-00001" summary="Первоначальная настройка приложения">
       <created>1608188144245</created>
@@ -93,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608251234456</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="создание reduser images">
+      <created>1608251953681</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608251953681</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +128,7 @@
     <MESSAGE value="Исправление ошибок по сборке приложения (auth, user)" />
     <MESSAGE value="action User and Images refactor" />
     <MESSAGE value="изменения в actions, создание reduser user и так же store" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменения в actions, создание reduser user и так же store" />
+    <MESSAGE value="создание reduser images" />
+    <option name="LAST_COMMIT_MESSAGE" value="создание reduser images" />
   </component>
 </project>
