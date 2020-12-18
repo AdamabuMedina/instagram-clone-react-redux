@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.13",
+    "@babel/core": "^7.12.7",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
     "@material-ui/core": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.0",
+    "babel-loader": "^8.0.0",
     "bootstrap-icons": "^1.2.1",
     "moment": "^2.29.1",
     "react": "^17.0.1",
@@ -23,14 +24,9 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "shortid": "^2.2.16",
+    "style-loader": "^2.0.0",
     "unsplash-js": "^7.0.1",
     "web-vitals": "^0.2.4",
-    "@babel/core": "^7.12.7",
-    "@babel/preset-env": "^7.12.7",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-react": "^7.12.7",
-    "babel-loader": "^8.0.0",
-    "style-loader": "^2.0.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
@@ -43,7 +39,6 @@
     "build:pro": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "server": "webpack serve --mode development"
-
   },
   "eslintConfig": {
     "extends": [
@@ -64,7 +59,6 @@
     ]
   },
   "devDependencies": {
-    "@material-ui/icons": "^4.11.2",
     "bootstrap": "^5.0.0-beta1",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^4.5.0"

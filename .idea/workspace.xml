@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14931352-af89-4284-85c7-4fa76df284f1" name="Default Changelist" comment="Первоначальная настройка приложения">
+      <change afterPath="$PROJECT_DIR$/src/components/likes/Like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/svg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,7 @@
       <updated>1608182549089</updated>
       <workItem from="1608182557600" duration="7633000" />
       <workItem from="1608233112277" duration="5123000" />
-      <workItem from="1608249231449" duration="4696000" />
+      <workItem from="1608249231449" duration="5774000" />
     </task>
     <task id="LOCAL-00001" summary="Первоначальная настройка приложения">
       <created>1608188144245</created>
@@ -108,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608252728477</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="настройка webpack">
+      <created>1608254139562</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608254139562</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +146,7 @@
     <MESSAGE value="изменения в actions, создание reduser user и так же store" />
     <MESSAGE value="создание reduser images" />
     <MESSAGE value="редактирование header (кнопки дисплай флекс)" />
-    <option name="LAST_COMMIT_MESSAGE" value="редактирование header (кнопки дисплай флекс)" />
+    <MESSAGE value="настройка webpack" />
+    <option name="LAST_COMMIT_MESSAGE" value="настройка webpack" />
   </component>
 </project>
