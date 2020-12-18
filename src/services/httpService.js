@@ -3,22 +3,25 @@ import {toast} from "react-toastify";
 import {accessKey} from "../config.json"
 
 axios.interceptors.response.use(null, error => {
-    const expectedError = error.response && error.response.status >= 400 && error.response.status < 500
+    const expectedError =
+        error.response &&
+        error.response.status >= 400 &&
+        error.response.status < 500;
 
-    if (!expectedError) toast.error("Ошибка запроса")
+    if (!expectedError) toast.error("Ошибка запроса.");
 
     if (error && error.response.status === 403)
-        toast.error("Превышен лимит запрос запросов к API")
+        toast.error("Превышен лимит запросов к API.");
 
-    return Promise.reject(error)
+    return Promise.reject(error);
 })
 
 export const setAuthHeader = token => {
     axios.defaults.headers.Authorization = token
-    ? `Bearer ${token}` : `Client-Id ${accessKey}`
-}
+        ? `Bearer ${token}`
+        : `Client-ID ${accessKey}`;
+};
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     get: axios.get,
     post: axios.post,

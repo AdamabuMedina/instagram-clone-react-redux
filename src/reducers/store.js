@@ -6,7 +6,3 @@ import {setAuthHeader} from "../services/httpService";
 import {fetchUser} from "../actions/actionUser";
 
 export const store = createStore(rootReducer, applyMiddleware(thunk))
-const userToken = getTokenFromStorage()
-
-setAuthHeader(userToken)
-if (userToken) store.dispatch(fetchUser())

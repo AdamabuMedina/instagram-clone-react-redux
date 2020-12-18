@@ -12,8 +12,8 @@ export const userLogging = () => ({
 
 export const fetchUser = () => async dispatch => {
     try {
-        const {data: user} = await getUser()
-        return dispatch(receiveUser(user))
+        const {data: user} = await getUser();
+        return dispatch(receiveUser(user));
     } catch (error) {
     }
 }

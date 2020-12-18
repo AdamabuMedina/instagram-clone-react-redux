@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.like {
+  outline: none !important;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.like:hover {
+  background-color: #fff;
+}
+
+.like__icon {
+  color: #f15151;
+  font-size: 1.5rem
+}
+.image-detail .like {
+  position: inherit;
+  align-self: center;
+  padding: 0.5rem 1.25rem;
+  background-color: #fff;
+}
+
+.image-detail .like__icon {
+  font-size: 2rem;
+}
+
+.image-detail .like__count {
+  font-size: 1.5rem;
+}
+
+.image-detail .like:hover {
+  border-color: #aaa;
+}
+
+
