@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import ImagesPage from "./components/pages/ImagesPage";
-import ImageDetail from "./components/pages/ImageDetailPage";
-import NotFoundPage from "./components/pages/NotFoundPage";
-import Header from "./components/navigation/Header";
+import ImagesPage from "./components/images/ImagesPage";
+import ImageModal from "./components/images/ImageModal";
+import NotFoundPage from "./components/images/NotFoundPage";
+import Header from "./components/header/Header";
 
 class App extends Component {
   previousLocation = this.props.location;
@@ -36,7 +36,7 @@ class App extends Component {
             <Route path="/not-found" component={NotFoundPage} />
             <Redirect to="/not-found" />
           </Switch>
-          {isModal ? <Route path="/image/:id" component={ImageDetail} /> : null}
+          {isModal ? <Route path="/image/:id" component={ImageModal} /> : null}
         </main>
       </React.Fragment>
     );

@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Modal from "react-responsive-modal";
-import Like from "../common/Like";
+import Like from "../likes/Like.js";
 
-class ImageDetailPage extends Component {
+class ImageModal extends Component {
   handleCloseModal = event => {
     event.stopPropagation();
     this.props.history.goBack();
   };
+
 
   render() {
     const { image } = this.props;
@@ -19,6 +20,7 @@ class ImageDetailPage extends Component {
           closeButton: { cursor: "pointer", outline: "none" }
         }}
         open
+        center
         onClose={this.handleCloseModal}
       >
         <div className="d-flex flex-wrap align-items-center mt-4 mb-2 image-detail">
@@ -59,4 +61,4 @@ const mapStateToProps = (state, ownProps) => ({
   image: imageSelector(state, ownProps)
 });
 
-export default connect(mapStateToProps)(ImageDetailPage);
+export default connect(mapStateToProps)(ImageModal);

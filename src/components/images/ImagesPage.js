@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Masonry from "react-masonry-component";
 import { toast } from "react-toastify";
-import LoaderSpinner from "../common/LoaderSpinner";
-import Like from "../common/Like";
-import { fetchImages, setLike, deleteLike } from "../../actions/images";
-import { dateFormat } from "../../utils";
+import LoaderSpinner from "../likes/LoaderSpinner.js";
+import Like from "../likes/Like.js";
+import { fetchImages, setLike, deleteLike } from "../../actions/actionImages";
+import { dateFormat } from "../../services/utils";
 
 class ImagesPage extends Component {
   state = {

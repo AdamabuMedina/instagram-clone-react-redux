@@ -1,6 +1,6 @@
 import { getImagesByPage } from "../services/imageService";
 import { likeImage, unlikeImage } from "../services/likeService";
-import { addShortId, extractDataFromResponse } from "../utils";
+import { addShortId, extractDataFromResponse } from "../services/utils";
 import {REQUEST_IMAGES, RECEIVE_IMAGES, SET_LIKE, DELETE_LIKE} from "./types";
 
 
