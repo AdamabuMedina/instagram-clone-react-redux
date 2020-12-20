@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import ImagesPage from "./components/images/ImagesPage";
+import ImagesPage from "./components/images/Images";
 import ImageModal from "./components/images/ImageModal";
 import NotFoundPage from "./components/images/NotFoundPage";
 import Header from "./components/header/Header";
@@ -9,7 +9,7 @@ import Header from "./components/header/Header";
 class App extends Component {
   previousLocation = this.props.location;
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     const { location } = this.props;
     if (
       nextProps.history.action !== "POP" &&
@@ -33,8 +33,8 @@ class App extends Component {
         <main className="container py-5">
           <Switch location={isModal ? this.previousLocation : location}>
             <Route path="/" exact component={ImagesPage} />
-            <Route path="/not-found" component={NotFoundPage} />
             <Redirect to="/not-found" />
+            <Route path="/not-found" component={NotFoundPage} />
           </Switch>
           {isModal ? <Route path="/image/:id" component={ImageModal} /> : null}
         </main>

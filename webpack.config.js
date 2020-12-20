@@ -92,15 +92,10 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPath: "./",
-                        },
-                    },
-                    'css-loader',
-                ],
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {},
+                }, 'css-loader',],
             },
 
             {

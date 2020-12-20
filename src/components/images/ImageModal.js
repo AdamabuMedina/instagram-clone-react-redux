@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Modal from "react-responsive-modal";
-import Like from "../likes/Like.js";
+import Like from "../Likes/Like";
 
 class ImageModal extends Component {
   handleCloseModal = event => {
     event.stopPropagation();
     this.props.history.goBack();
   };
-
 
   render() {
     const { image } = this.props;
@@ -20,7 +19,6 @@ class ImageModal extends Component {
           closeButton: { cursor: "pointer", outline: "none" }
         }}
         open
-        center
         onClose={this.handleCloseModal}
       >
         <div className="d-flex flex-wrap align-items-center mt-4 mb-2 image-detail">

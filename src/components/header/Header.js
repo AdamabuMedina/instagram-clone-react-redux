@@ -37,7 +37,7 @@ const Header = ({ user }) => {
                 />
                 <span className="navbar-text">{user.name}</span>
                 <button
-                  className="btn btn-dark"
+                  className="btn btn-dark ml-auto ml-sm-4"
                   onClick={() => {
                     localStorage.removeItem(tokenKey);
                     window.location = "/";
@@ -50,7 +50,7 @@ const Header = ({ user }) => {
             {!user.id && (
               <div className="d-flex py-3 py-sm-0">
                 <button
-                  className="btn btn-dark"
+                  className="btn btn-dark ml-auto ml-sm-4"
                   onClick={() => {
                     window.location = auth.getAuthUrl();
                   }}

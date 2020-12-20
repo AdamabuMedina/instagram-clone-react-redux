@@ -50,3 +50,9 @@
 .image-detail .like:hover {
     border-color: #aaa;
 }
+
+.img-fluid {
+    height: 750px;
+    max-height: 100%;
+    object-fit: fill;
+}
