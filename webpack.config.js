@@ -82,10 +82,8 @@ module.exports = {
     devServer: {
         compress: true,
         port: 3000,
-        hot: isDev,
     },
     plugins: plugins(),
-    devtool: isDev ? "source-map" : "eval",
     module: {
         rules: [
             {
