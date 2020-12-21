@@ -1,6 +1,6 @@
 const path = require("path")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin');
@@ -80,11 +80,9 @@ module.exports = {
     },
     optimization: optimization(),
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 9000,
-        open: true,
-        hot: isDev
+        port: 3000,
+        hot: isDev,
     },
     plugins: plugins(),
     devtool: isDev ? "source-map" : "eval",
