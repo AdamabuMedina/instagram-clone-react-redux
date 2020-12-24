@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
-import auth from "../../services/authService";
 import { tokenKey } from "../../config.json";
+import authService from "../../services/authService";
 
 const Header = ({ user }) => {
   return (
@@ -52,7 +52,7 @@ const Header = ({ user }) => {
                 <button
                   className="btn btn-dark ml-auto ml-sm-4"
                   onClick={() => {
-                    window.location = auth.getAuthUrl();
+                    window.location = authService.getAuthUrl();
                   }}
                 >
                   Войти

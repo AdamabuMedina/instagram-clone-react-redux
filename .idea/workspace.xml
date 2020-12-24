@@ -2,27 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b7408ce-1a3a-4d13-a7b6-73bc2e2d9ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/instagram-clone-react-redux.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.ee3c3b15088c6d3cc444.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.ee3c3b15088c6d3cc444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.js.LICENSE.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionImages.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/images.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/images/ImageModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/ImageModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/ImagesPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/likes/LoaderSpinner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/Images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/Images.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/NotFoundPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/likes/Like.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/likes/Like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/likes/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/likes/Loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/images.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/codeError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/httpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/httpService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/imageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/imageService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/likeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/likeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/userService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +49,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lvfgCjg9PyoeD90zuF2nZOof6d" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -43,10 +63,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -65,6 +94,8 @@
       <workItem from="1608482618061" duration="204000" />
       <workItem from="1608482829208" duration="169000" />
       <workItem from="1608483021018" duration="11541000" />
+      <workItem from="1608829231718" duration="42000" />
+      <workItem from="1608829280138" duration="7762000" />
     </task>
     <servers />
   </component>
@@ -81,6 +112,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

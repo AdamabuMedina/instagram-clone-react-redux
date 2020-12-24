@@ -1,10 +1,10 @@
 {
   "apiUrl": "https://api.unsplash.com",
-  "accessKey": "d16412c8260658b0603e89f09c568c49b52f586347c1ffa056e70d915da2fd68",
-  "secretKey": "badd56114710a1c9d1f3a9179bb4ee08ef883d3f4ae9cbc673e085c491ef6432",
+  "accessKey": "UPLaj3YzLjhdRB7mX2zCslbuLPyf1XXpkUc1Hxhkd28",
+  "secretKey": "XfLUeY3re7H1-fzLrbA1LkpqcpogVG3Jshi_8qQGlQA",
   "authUrl": "https://unsplash.com/oauth/authorize",
   "tokenUrl": "https://unsplash.com/oauth/token",
-  "redirectUrl": "http://skillbox-js-course.eu5.net",
+  "redirectUrl": "http://unsplash-app.timewebtest.com",
   "scope": "public+write_likes",
   "tokenKey": "=qV6je9*pQjgeLxC"
 }

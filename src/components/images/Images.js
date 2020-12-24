@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Masonry from "react-masonry-component";
 import { toast } from "react-toastify";
-import Loader from "../Likes/Loader";
-import Like from "../Likes/Like";
+import Loader from "../likes/Loader";
+import Like from "../likes/Like";
 import { fetchImages, setLike, deleteLike } from "../../actions/images";
 import { dateFormat } from "../../services/utils";
 
