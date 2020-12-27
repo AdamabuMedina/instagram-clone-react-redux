@@ -7,13 +7,12 @@ import Loader from "../likes/Loader";
 import Like from "../likes/Like";
 import { fetchImages, setLike, deleteLike } from "../../actions/images";
 import { dateFormat } from "../../services/utils";
+import SCROLL_OFFSET from "./consts";
 
 class Images extends Component {
   state = {
     currentPage: 1
   };
-
-  SCROLL_OFFSET = 80;
 
   componentDidMount() {
     if (!this.props.isLoggingIn) this.props.fetchImages();
@@ -25,13 +24,14 @@ class Images extends Component {
       this.props.fetchImages();
   }
 
+
   handleScroll = () => {
     const { isLoading, lastPage, fetchImages } = this.props;
     if (isLoading || lastPage <= this.state.currentPage) return;
     const lastCard = document.querySelector(".image:last-child");
     const lastCardOffset = lastCard.offsetTop + lastCard.clientHeight;
     const pageOffset = window.pageYOffset + window.innerHeight;
-    if (pageOffset > lastCardOffset - this.SCROLL_OFFSET) {
+    if (pageOffset > lastCardOffset - SCROLL_OFFSET) {
       this.setState(
         prevState => ({
           currentPage: prevState.currentPage + 1
@@ -48,7 +48,7 @@ class Images extends Component {
 
   handleLike = imageId => {
     if (!this.props.user) {
-      toast.info("Залогиньтесь, чтобы поставить лайк!");
+      toast.info("Авторизуйтесь, чтобы поставить лайк!");
       return;
     }
     if (this.isImageLiked(imageId)) this.props.deleteLike(imageId);
