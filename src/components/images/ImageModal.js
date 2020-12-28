@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Modal from "react-responsive-modal";
-import Like from "../Likes/Like";
+import Like from "../likes/Like";
 
 class ImageModal extends Component {
   handleCloseModal = event => {
