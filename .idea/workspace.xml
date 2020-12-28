@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b7408ce-1a3a-4d13-a7b6-73bc2e2d9ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/images/consts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/Images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/Images.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/NotFoundPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +60,8 @@
       <workItem from="1608829231718" duration="42000" />
       <workItem from="1608829280138" duration="8116000" />
       <workItem from="1608840116071" duration="137000" />
-      <workItem from="1609052221913" duration="3282000" />
+      <workItem from="1609052221913" duration="4490000" />
+      <workItem from="1609069698630" duration="22000" />
     </task>
     <task id="LOCAL-00001" summary="Окончена верстка диплома. Отправка на проверку">
       <created>1608839448250</created>
@@ -75,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608839448250</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Исправление ошибок.">
+      <created>1609056007700</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609056007700</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +98,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Окончена верстка диплома. Отправка на проверку" />
-    <option name="LAST_COMMIT_MESSAGE" value="Окончена верстка диплома. Отправка на проверку" />
+    <MESSAGE value="Исправление ошибок." />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление ошибок." />
   </component>
 </project>
