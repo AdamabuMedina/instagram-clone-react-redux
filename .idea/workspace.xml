@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b7408ce-1a3a-4d13-a7b6-73bc2e2d9ba8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.2d89cd860d9bbcd95339.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.2d89cd860d9bbcd95339.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.2d89cd860d9bbcd95339.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.cab01bac36b66cfccf53.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.cab01bac36b66cfccf53.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.ee3c3b15088c6d3cc444.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.ee3c3b15088c6d3cc444.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.js.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.cab01bac36b66cfccf53.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.cab01bac36b66cfccf53.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.cab01bac36b66cfccf53.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.cab01bac36b66cfccf53.js.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.js.LICENSE.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +72,7 @@
       <workItem from="1608840116071" duration="137000" />
       <workItem from="1609052221913" duration="4490000" />
       <workItem from="1609069698630" duration="22000" />
+      <workItem from="1609156806839" duration="345000" />
     </task>
     <task id="LOCAL-00001" summary="Окончена верстка диплома. Отправка на проверку">
       <created>1608839448250</created>
