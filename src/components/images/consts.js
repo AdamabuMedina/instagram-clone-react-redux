@@ -1,3 +1,4 @@
-const SCROLL_OFFSET = 80;
+const scrollPosition = window.pageYOffset
 
-export default SCROLL_OFFSET
+
+export default {scrollPosition}

@@ -2,17 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b7408ce-1a3a-4d13-a7b6-73bc2e2d9ba8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/main.2d89cd860d9bbcd95339.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.2d89cd860d9bbcd95339.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.2d89cd860d9bbcd95339.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.cab01bac36b66cfccf53.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.cab01bac36b66cfccf53.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.ee3c3b15088c6d3cc444.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.ee3c3b15088c6d3cc444.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.2d89cd860d9bbcd95339.js.LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.cab01bac36b66cfccf53.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.cab01bac36b66cfccf53.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.cab01bac36b66cfccf53.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.cab01bac36b66cfccf53.js.LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendors~main.ee3c3b15088c6d3cc444.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/001-like.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/002-heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/unsplash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/ImageModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/ImageModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/Images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/Images.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/consts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/likes/Like.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/likes/Loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/images.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/authService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/httpService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/imageService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/likeService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/userService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +39,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1lvfgCjg9PyoeD90zuF2nZOof6d" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -38,7 +60,6 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -52,6 +73,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\adam\Documents\my_studies\Програмирование\GitHub\instagram-clone\src\components\images" />
+      <recent name="D:\Users\adam\Documents\my_studies\Програмирование\GitHub\instagram-clone\src" />
+      <recent name="D:\Users\adam\Documents\my_studies\Програмирование\GitHub\instagram-clone\src\services" />
       <recent name="D:\Users\adam\Documents\my_studies\Програмирование\GitHub\instagram-clone-react-redux\src\components\images" />
       <recent name="D:\Users\adam\Documents\my_studies\Програмирование\GitHub\instagram-clone-react-redux\src\services" />
     </key>
@@ -73,6 +97,9 @@
       <workItem from="1609052221913" duration="4490000" />
       <workItem from="1609069698630" duration="22000" />
       <workItem from="1609156806839" duration="345000" />
+      <workItem from="1609263170396" duration="5914000" />
+      <workItem from="1609339330008" duration="59000" />
+      <workItem from="1609339490852" duration="13238000" />
     </task>
     <task id="LOCAL-00001" summary="Окончена верстка диплома. Отправка на проверку">
       <created>1608839448250</created>

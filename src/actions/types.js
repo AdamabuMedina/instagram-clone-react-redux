@@ -1,8 +1,7 @@
-export const REQUEST_IMAGES = "REQUEST_IMAGES";
-export const RECEIVE_IMAGES = "RECEIVE_IMAGES";
-export const SET_LIKE = "SET_LIKE";
-export const DELETE_LIKE = "DELETE_LIKE";
+export const LOAD_PHOTOS = "LOAD_PHOTOS";
+export const GET_PHOTO = "GET_PHOTO";
+export const LIKE_PHOTO = "LIKE_PHOTO";
+export const UNLIKE_PHOTO = "UNLIKE_PHOTO";
 
-export const RECEIVE_USER = "RECEIVE_USER";
-export const USER_LOGGING_IN = 'USER_LOGGING_IN';
+export const GET_USERNAME = "GET_USERNAME";
 

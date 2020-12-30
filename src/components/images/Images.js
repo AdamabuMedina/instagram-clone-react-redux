@@ -3,47 +3,42 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Masonry from "react-masonry-component";
 import { toast } from "react-toastify";
-import Loader from "../likes/Loader";
-import Like from "../likes/Like";
-import { fetchImages, setLike, deleteLike } from "../../actions/images";
-import { dateFormat } from "../../services/utils";
-import SCROLL_OFFSET from "./consts";
+import scrollPosition from "./consts";
+import {unsplashLoadPhotos} from "../../services/unsplash";
+import {getUserName, loadPhotos} from "../../actions/action";
+import {getFormattedDate} from "../../services/utils";
+
+let itemsWereLoaded = false;
 
 class Images extends Component {
-  state = {
-    currentPage: 1
-  };
+  constructor(props) {
+  super(props);
+  this.loadPhotos = this.loadPhotos.bind(this);
+}
 
   componentDidMount() {
-    if (!this.props.isLoggingIn) this.props.fetchImages();
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentDidUpdate(prevProps, state) {
-    if (prevProps.isLoggingIn !== this.props.isLoggingIn)
-      this.props.fetchImages();
-  }
-
-
-  handleScroll = () => {
-    const { isLoading, lastPage, fetchImages } = this.props;
-    if (isLoading || lastPage <= this.state.currentPage) return;
-    const lastCard = document.querySelector(".image:last-child");
-    const lastCardOffset = lastCard.offsetTop + lastCard.clientHeight;
-    const pageOffset = window.pageYOffset + window.innerHeight;
-    if (pageOffset > lastCardOffset - SCROLL_OFFSET) {
-      this.setState(
-        prevState => ({
-          currentPage: prevState.currentPage + 1
-        }),
-        () => fetchImages(this.state.currentPage)
-      );
+    if (!itemsWereLoaded) {
+      this.loadPhotos();
+      itemsWereLoaded = true;
     }
-  };
+  }
+
+  loadPhotos() {
+    let page = localStorage.getItem("page");
+
+    unsplashLoadPhotos(page, localStorage.getItem("token"))
+      .then((photos) => {
+        this.props.loadPhotos(photos);
+      })
+      .then(() => {
+        localStorage.setItem("page", +page + 1);
+        window.scrollTo({ top: scrollPosition });
+      });
+  }
 
   isImageLiked = imageId => {
-    const image = this.props.images.find(i => i.id === imageId);
-    return image.liked_by_user;
+    const photo = this.props.photos.find(i => i.id === imageId);
+    return photo.liked_by_user;
   };
 
   handleLike = imageId => {
@@ -56,75 +51,72 @@ class Images extends Component {
   };
 
   render() {
-    const { images, isLoading } = this.props;
+    const { photos, isLoading } = this.props;
     return (
-      <React.Fragment>
-        <Masonry className="row">
-          {images.map(image => (
-            <div key={image.uid} className="col-md-6 col-lg-4 mb-3 image">
+      <ul>
+          {this.props.photos.map((photo, i) => (
+
+            <div key={photo.uid} className="col-md-6 col-lg-4 mb-3 image">
               <div className="card position-relative">
                 <Link
                   to={{
-                    pathname: `/image/${image.id}`,
+                    pathname: `/image/${photo.id}`,
                     state: { modal: true },
-                    imageId: image.id,
-                    onLike: () => this.handleLike(image.id)
+                    photoId: photo.id,
+                    onLike: () => this.handleLike(photo.id)
                   }}
                 >
                   <img
                     className="card-img-top"
-                    src={image.urls.small}
-                    alt={image.description || image.user.name}
+                    src={photo.urls.small}
+                    alt={photo.description || photo.user.name}
                   />
                 </Link>
                 <div className="card-body">
-                  <Like
-                    liked={image.liked_by_user}
-                    likeCount={image.likes}
-                    onClick={() => this.handleLike(image.id)}
-                  />
                   <div className="card-text">
                     <div className="d-flex align-items-center mb-3">
                       <img
                         className="rounded-circle mr-2 d-sm-none d-md-inline-block"
-                        src={image.user.profile_image.small}
-                        alt={image.user.name}
+                        src={photo.user.profile_image.small}
+                        alt={photo.user.name}
                       />
                       <a
                         className="text-dark"
-                        href={image.user.links.html}
+                        href={photo.user.links.html}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {image.user.name}
+                        {photo.user.name}
                       </a>
                     </div>
                     <small className="text-muted">
-                      Опубликовано: {dateFormat(image.created_at)}
+                      Опубликовано: {getFormattedDate(photo.updated_at)}
                     </small>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </Masonry>
-        {isLoading && <Loader />}
-      </React.Fragment>
+        <button
+          className="show-more-button"
+          onClick={(e) => {
+            this.loadPhotos();
+          }}
+        >
+          Загрузить еще
+        </button>
+      </ul>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    images: state.images.items,
-    isLoading: state.images.isLoading,
-    lastPage: state.images.lastPage,
-    user: !!state.user.authUser.id,
-    isLoggingIn: state.user.isLoggingIn
-  };
-};
+const mapStateToProps = (state) => ({ photos: state.photos, user: state.user });
 
-export default connect(
-  mapStateToProps,
-  { fetchImages, setLike, deleteLike }
-)(Images);
+function mapDispatchToProps(dispatch) {
+  return {
+    loadPhotos: (photos) => dispatch(loadPhotos(photos)),
+    getUserName: (user) => dispatch(getUserName(user)),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Images);

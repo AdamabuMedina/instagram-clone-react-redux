@@ -1,26 +1,17 @@
-import { RECEIVE_USER, USER_LOGGING_IN } from "../actions/types";
+import {GET_USERNAME} from "../actions/types";
 
 const initialState = {
-  authUser: {},
-  isLoggingIn: false
-};
+  username: "",
+}
 
 const user = (state = initialState, action) => {
   switch (action.type) {
-    case RECEIVE_USER:
-      return {
-        ...state,
-        authUser: action.user,
-        isLoggingIn: false
-      };
-    case USER_LOGGING_IN:
-      return {
-        ...state,
-        isLoggingIn: true
-      };
-    default:
-      return state;
-  }
-};
+    case GET_USERNAME:
+      return action.user
 
-export default user;
+    default:
+      return state
+  }
+}
+
+export default user

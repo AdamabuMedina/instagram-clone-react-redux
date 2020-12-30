@@ -4,7 +4,7 @@
   "secretKey": "XfLUeY3re7H1-fzLrbA1LkpqcpogVG3Jshi_8qQGlQA",
   "authUrl": "https://unsplash.com/oauth/authorize",
   "tokenUrl": "https://unsplash.com/oauth/token",
-  "redirectUrl": "http://ct90046.tmweb.ru",
+  "callbackUrl": "http://ct90046.tmweb.ru",
   "scope": "public+write_likes",
   "tokenKey": "=qV6je9*pQjgeLxC"
 }
