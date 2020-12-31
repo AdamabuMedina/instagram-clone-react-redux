@@ -2,34 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b7408ce-1a3a-4d13-a7b6-73bc2e2d9ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/001-like.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/002-heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/unsplash.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/ImageModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/ImageModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/Images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/Images.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/images/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/images/consts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/likes/Like.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/likes/Loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/images.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/authService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/httpService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/imageService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/likeService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/userService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/001-like.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/002-heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/ImageModal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/Images.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/NotFoundPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/images/consts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/unsplash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/utils.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +92,8 @@
       <workItem from="1609156806839" duration="345000" />
       <workItem from="1609263170396" duration="5914000" />
       <workItem from="1609339330008" duration="59000" />
-      <workItem from="1609339490852" duration="13238000" />
+      <workItem from="1609339490852" duration="13522000" />
+      <workItem from="1609401553856" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="Окончена верстка диплома. Отправка на проверку">
       <created>1608839448250</created>
@@ -115,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609056007700</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Изменение конструкции приложения">
+      <created>1609360193232</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609360193232</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +138,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Окончена верстка диплома. Отправка на проверку" />
     <MESSAGE value="Исправление ошибок." />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправление ошибок." />
+    <MESSAGE value="Изменение конструкции приложения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменение конструкции приложения" />
   </component>
 </project>

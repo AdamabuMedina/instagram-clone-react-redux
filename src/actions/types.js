@@ -1,7 +1,5 @@
-export const LOAD_PHOTOS = "LOAD_PHOTOS";
-export const GET_PHOTO = "GET_PHOTO";
-export const LIKE_PHOTO = "LIKE_PHOTO";
-export const UNLIKE_PHOTO = "UNLIKE_PHOTO";
-
-export const GET_USERNAME = "GET_USERNAME";
-
+export const ADD_IMAGES = "ADD_IMAGES"
+export const LOG_IN = "LOG_IN"
+export const LOG_OUT = "LOG_OUT"
+export const LIKED_IMAGE = "LIKED_IMAGE"
+export const UNLIKED_IMAGE = "UNLIKED_IMAGE"

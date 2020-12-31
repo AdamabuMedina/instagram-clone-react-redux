@@ -1,31 +1,24 @@
-import {GET_PHOTO, GET_USERNAME, LIKE_PHOTO, LOAD_PHOTOS, UNLIKE_PHOTO} from "./types";
+import { ADD_IMAGES, LIKED_IMAGE, LOG_IN, LOG_OUT } from "./types";
 
-export const loadPhotos = (photos) => ({
-    type: LOAD_PHOTOS,
-    photos,
-});
+export const addImages = state => ({
+   type: ADD_IMAGES,
+   images: state
+})
 
-export const getPhoto = (photo) => ({
-    type: GET_PHOTO,
-    photo,
-});
+export const logInUser = () => ({
+   type: LOG_IN,
+})
 
-export const likePhoto = (photo) =>  ({
-    type: LIKE_PHOTO,
-    id: photo.id,
-    likes: photo.likes,
-});
+export const logOutUser = () => ({
+   type: LOG_OUT,
+})
 
-export const unlikePhoto = (photo) => ({
-    type: UNLIKE_PHOTO,
-    id: photo.id,
-    likes: photo.likes,
-});
+export const likedImage = state => ({
+   type: LIKED_IMAGE,
+   id: state,
+})
 
-export const getUserName = (user) => ({
-    type: GET_USERNAME,
-    user,
-});
-
-
-
+export const unlikedImage = state => ({
+   type: LIKED_IMAGE,
+   id: state,
+})
