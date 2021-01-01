@@ -10,7 +10,7 @@ const Header = (props) => {
                {
                   (localStorage.getItem("token") === "undefined" ||
                      localStorage.getItem("token") === "" ||
-                     localStorage.getItem("token")) ?
+                     !localStorage.getItem("token")) ?
                      <ul className="container-fluid">
                         <li className="navbar-brand">
                            <NavLink to="/" className="navbar-brand">Unsplash App</NavLink>
@@ -18,7 +18,7 @@ const Header = (props) => {
                         <li
                            className="navbar-brand"
                            onClick={() => logIn()}>
-                           <Link to="/photos" className="btn btn-outline-secondary">Войти</Link>
+                           <Link to="/" className="btn btn-outline-secondary">Войти</Link>
                         </li>
                      </ul>
                      :

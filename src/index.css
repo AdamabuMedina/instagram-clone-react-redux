@@ -1,3 +1,133 @@
 .header {
   background-color: lightgray;
 }
+
+/* Images */
+
+.list-images {
+  margin: 20px;
+  display: flex;
+  width: calc(25% - 40px);
+  overflow: hidden;
+}
+
+.list-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.list-images:hover .list-stats,
+.list-images:focus .list-stats {
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset black 0 0 1000px 0;
+}
+
+.list-stats {
+  opacity: 0;
+  position: absolute;
+  transition: all 0.9s;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.author {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.author__img {
+  margin-right: 8px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.author-name {
+  color: #b8fff8;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.date {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn-like {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  padding: 6px 12px;
+  background: #71908d;
+  color: #fff;
+  z-index: 1;
+}
+
+.btn {
+  border: none;
+  font-size: 16px;
+}
+
+.btn-like:before {
+  content: "\2661";
+  font-family: "icons";
+  margin-right: 6px;
+}
+
+.btn-like.liked {
+  background: #009688;
+  color: #fff;
+}
+
+.btn-like.liked:before {
+  content: "\2665";
+}
+
+.btn-like:hover {
+  background: #009688;
+  color: #fff;
+}
+
+.btn-like:hover:before {
+  content: "\2665";
+}
+
+.btn-like.liked:hover {
+  background: #71908d;
+  color: #fff;
+}
+
+.btn-like.liked:hover:before {
+  content: "\2661";
+}
+
+.image-detail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/* ImagesModal */
+
+.back {
+  display: block;
+  margin-left: 24px;
+  margin-top: 24px;
+  color: #fff;
+  font-size: 18px;
+}
