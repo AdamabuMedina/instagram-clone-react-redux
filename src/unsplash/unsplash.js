@@ -1,40 +1,62 @@
-import Unsplash from "unsplash-js"
+import Unsplash from "unsplash-js";
 
 export const unsplash = new Unsplash({
    accessKey: "UPLaj3YzLjhdRB7mX2zCslbuLPyf1XXpkUc1Hxhkd28",
    secretKey: "XfLUeY3re7H1-fzLrbA1LkpqcpogVG3Jshi_8qQGlQA",
-   callbackUrl: "http://ct90046.tmweb.ru/"
+   callbackUrl: "http://ct90046.tmweb.ru/auth",
 })
 
-export const authenticationUrl = unsplash.auth.getAuthenticationUrl([
-   "public",
-   "write_likes",
-])
+export const authenticationUnsplash = (unsplash) => {
+   const authenticationUrl = unsplash.auth.getAuthenticationUrl([
+      "public",
+      "write_likes",
+   ])
 
-export const setAccessTokenUnplash = (code) => {
-   unsplash.auth.userAuthentication(code)
-      .then(res => res.json())
-      .then(json =>
-         localStorage.setItem("token", json.access_token)
-      )
+   const code = window.location.search.split("code=")[1];
+
+   if (!code) {
+      window.location.assign(authenticationUrl);
+   }
 }
 
-export const setBearerToken = (token) => {
-   unsplash.auth.setBearerToken(token)
+export const identifyUser = (unsplash) => {
+   const code = window.location.search.split("code=")[1];
+
+   if (code) {
+      unsplash.auth.userAuthentication(code)
+         .then(res => res.json())
+         .then(json => {
+            unsplash.auth.setBearerToken(json.access_token);
+            localStorage.setItem("user_info", JSON.stringify
+               ({ access_token: json.access_token, refresh_token: json.refresh_token }))
+         });
+   }
 }
 
-export const listImage = (start, token) => {
-   setBearerToken(token)
-   return unsplash.photos.listImage(start, 10, "latest")
-      .then(res => res.json())
-}
+export const likePhoto = (unsplash, image) => {
+   if (image.liked_by_user === false) {
+      return (
+         unsplash.photos.likePhoto(image.id)
+            .then((res) => res.text())
+            .then((res) => {
+               if (res !== "Rate Limit Exceeded" && !JSON.parse(res).errors) {
+                  JSON.parse(res);
+               }
+               console.error("Лимит запросов исчерпан!")
+            })
+      );
+   }
 
-export const likeImage = (id, token) => {
-   setBearerToken(token)
-   unsplash.photos.likeImage(id)
-}
-
-export const unlikeImage = (id, token) => {
-   setBearerToken(token)
-   unsplash.photos.unlikeImage(id)
-}
+   else if (image.liked_by_user === true) {
+      return (
+         unsplash.photos.unlikePhoto(image.id)
+            .then((res) => res.text())
+            .then((res) => {
+               if (res !== "Rate Limit Exceeded" && !JSON.parse(res).errors) {
+                  return JSON.parse(res);
+               }
+               console.error("Лимит запросов исчерпан!");
+            })
+      );
+   }
+};
