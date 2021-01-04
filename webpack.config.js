@@ -1,124 +1,97 @@
-const path = require("path")
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin');
-const webpack = require("webpack");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-
-const isDev = process.env.NODE_ENV === "development"
-const isProd = !isDev
-console.log("IS DEV:", isDev)
-
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
-
-const plugins = () => {
-    const base = [
-        new HtmlWebpackPlugin({
-            template: "../public/index.html",
-            minify: {
-                collapseWhitespace: isProd,
-            }
-        }),
-        new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin({
-            filename: filename("css"),
-        }),
-    ]
-
-    if (isDev) {
-        base.push(new webpack.HotModuleReplacementPlugin());
-    }
-    if (isProd) {
-        base.push(new BundleAnalyzerPlugin())
-    }
-
-    return base
-}
-
-
-const optimization = () => {
-    const config = {
-        splitChunks: {
-            chunks: "all"
-        }
-    }
-    if (isProd) {
-        config.minimizer = [
-            new OptimizeCssAssetsPlugin(),
-            new TerserPlugin()
-        ]
-    }
-    return config
-}
-
-const babelOptions = preset => {
-    const opts = {
-        presets: ["@babel/preset-env"],
-        plugins: ["@babel/plugin-proposal-class-properties"]
-    }
-    if (preset) {
-        opts.presets.push(preset)
-    }
-
-    return opts
-}
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-    context: path.resolve(__dirname, "src"),
-    mode: "development",
-    entry: {
-        main: ["@babel/polyfill", "./index.js"],
+  entry: "./src/index.js",
+  mode: 'production',
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: '[name].[contenthash].js',
+    publicPath: '/',
+  },
+  devServer: {
+    historyApiFallback: true
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
     },
-    output: {
-        filename: filename("js"),
-        path: path.resolve(__dirname, "dist")
-    },
-    resolve: {
-        extensions: [".js", ".json", ".png", "jsx"]
-    },
-    optimization: optimization(),
-    devServer: {
-        compress: true,
-        port: 3000,
-    },
-    plugins: plugins(),
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {},
-                }, 'css-loader',],
-            },
-
-            {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: ["file-loader"]
-            },
-            {
-                test: /\.(ttf|woff|woff2|eot)/,
-                use: ["file-loader"]
-            },
-            {
-                test: /\.m?js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: babelOptions("@babel/preset-react")
-                }
-            },
-            {
-                test: /\.m?jsx$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: babelOptions("@babel/preset-react")
-                }
-            },
-
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          compress: {
+            unsafe: true,
+            inline: true,
+            passes: 2,
+            keep_fargs: false,
+          },
+          output: {
+            beautify: false,
+          },
+          mangle: true,
+        },
+      })
+    ],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
+      {
+        test: /\.css$/i,
+        loader: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
+        test: /\.(woff(2)?)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
         ]
-    }
-}
+      },
+      {
+        test: /\.ico$/,
+        loader: 'file-loader?name=[name].[ext]'
+      }
+    ]
+  },
+
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './public',
+    hot: true,
+    port: 3000,
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: __dirname + '/public/index.html',
+      scriptLoading: 'defer',
+      title: 'Caching',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].bundle.css'
+    }),
+    new CleanWebpackPlugin()
+  ],
+};
