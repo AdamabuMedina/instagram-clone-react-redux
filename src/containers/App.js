@@ -5,15 +5,13 @@ import PhotoList from "../components/PhotoList.js"
 import PhotoDetails from "../components/PhotoDetails.js"
 import Header from "../components/Header.js"
 import Auth from "../components/Auth.js"
-import { store } from "../index"
 import { likePhoto, unlikePhoto, authenticationUrl } from "../unsplash/unsplash.js"
 import { addImages, likedPhoto, unlikedPhoto, logOutAction, logInAction } from "../actions/actions.js"
 
-let App = (props) => {
-  const { images, addImages, likedPhoto, unlikedPhoto, logOutAction, logInAction } = props
+const App = (props) => {
+  const { images, addImages, likedPhoto, unlikedPhoto, logOutAction, logInAction, currentState } = props
 
   const likeUpdate = id => {
-    const currentState = store.getState()
     const targetElement = currentState.find(item => item.id === id)
     if (!targetElement.liked_by_user) {
       targetElement.liked_by_user = true
@@ -34,16 +32,13 @@ let App = (props) => {
   }
 
   const logOut = () => {
-    localStorage.clear("token")
+    localStorage.removeItem("token")
     logOutAction()
   }
 
   return (
     <Switch>
-      <Route exact path="/">
-        <Header logIn={logIn} logOut={logOut} />
-        <Auth logIn={logIn} />
-      </Route>
+      <Route exact path="/" component={Auth} />
       <Route exact path="/photos">
         <Header logIn={logIn} logOut={logOut} />
         <PhotoList images={images} addImages={addImages} likedPhoto={likeUpdate} unlikedPhoto={likeUpdate} />
@@ -57,21 +52,19 @@ let App = (props) => {
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    images: state
-  }
-}
+const mapStateToProps = state => ({
+  images: state,
+  currentState: state
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addImages: (images) => dispatch(addImages(images)),
-    likedPhoto: (id) => dispatch(likedPhoto(id)),
-    unlikedPhoto: (id) => dispatch(unlikedPhoto(id)),
-    logOutAction: () => dispatch(logOutAction()),
-    logInAction: () => dispatch(logInAction())
-  }
-}
+})
+
+const mapDispatchToProps = dispatch => ({
+  addImages: (images) => dispatch(addImages(images)),
+  likedPhoto: (id) => dispatch(likedPhoto(id)),
+  unlikedPhoto: (id) => dispatch(unlikedPhoto(id)),
+  logOutAction: () => dispatch(logOutAction()),
+  logInAction: () => dispatch(logInAction())
+})
 
 export default connect(
   mapStateToProps,

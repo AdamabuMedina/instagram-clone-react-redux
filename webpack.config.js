@@ -1,12 +1,13 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: "./src/index.js",
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name].[contenthash].js',
+    filename: '[name].[hash].js',
     publicPath: '/',
   },
   devServer: {
@@ -54,5 +55,7 @@ module.exports = {
       template: __dirname + '/public/index.html',
       scriptLoading: 'defer',
       title: 'Caching',
-    })],
+    }),
+    new CleanWebpackPlugin()
+  ],
 };

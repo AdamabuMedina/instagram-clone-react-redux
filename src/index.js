@@ -9,6 +9,8 @@ import reducers from "./reducers/reducers.js"
 import { setAccessTokenUnplash } from "./unsplash/unsplash.js"
 import { createBrowserHistory } from "history"
 
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min"
 import "./css/button.css"
 import "./css/components.css"
 import "./css/App.css"

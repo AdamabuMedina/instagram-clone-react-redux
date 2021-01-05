@@ -5,7 +5,6 @@ import { setAccessTokenUnplash, listPhoto } from "../unsplash/unsplash.js"
 class PhotoDetails extends React.Component {
   constructor(props) {
     super(props)
-    this.loadImages = this.loadImages.bind(this)
 
     if (localStorage.getItem("token") === "undefined" ||
       localStorage.getItem("token") === "" ||

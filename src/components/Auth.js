@@ -1,17 +1,14 @@
 import React from "react"
+import { authenticationUrl } from "../unsplash/unsplash";
 
-const Auth = (props) => {
-  const { logIn } = props
-  return (
-    <div className="main-container">
-      <button
-        className="btn btn-load"
-        type="button"
-        onClick={logIn}>
-        Авторизация
-        </button>
-    </div>
-  )
+class Auth extends React.Component {
+  componentDidMount() {
+    location.assign(authenticationUrl);
+  }
+
+  render() {
+    return <div />;
+  }
 }
 
-export default Auth
+export default Auth;

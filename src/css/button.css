@@ -71,3 +71,9 @@
 .btn-detail:focus {
   background: gray;
 }
+
+/* Loader */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
