@@ -1,9 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: "./src/index.js",
@@ -16,36 +12,6 @@ module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  optimization: {
-    runtimeChunk: 'single',
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
-      },
-    },
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          compress: {
-            unsafe: true,
-            inline: true,
-            passes: 2,
-            keep_fargs: false,
-          },
-          output: {
-            beautify: false,
-          },
-          mangle: true,
-        },
-      })
-    ],
-  },
   module: {
     rules: [
       {
@@ -55,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        loader: [MiniCssExtractPlugin.loader, 'css-loader']
+        loader: ["style-loader", 'css-loader']
       },
       {
         test: /\.(woff(2)?)?$/,
@@ -63,7 +29,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
+              name: '[name].[contenthash].[ext]',
               outputPath: 'fonts/'
             }
           }
@@ -71,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.ico$/,
-        loader: 'file-loader?name=[name].[ext]'
+        loader: 'file-loader?name=[name].[contenthash].[ext]'
       }
     ]
   },
@@ -88,10 +54,5 @@ module.exports = {
       template: __dirname + '/public/index.html',
       scriptLoading: 'defer',
       title: 'Caching',
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].bundle.css'
-    }),
-    new CleanWebpackPlugin()
-  ],
+    })],
 };
