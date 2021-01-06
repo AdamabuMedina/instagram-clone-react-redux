@@ -49,16 +49,6 @@ const reducers = (state = [], action) => {
         return img
       })
 
-    case LOG_OUT:
-      return {
-        ...state,
-      }
-
-    case LOG_IN:
-      return {
-        ...state,
-      }
-
     default:
       return state
   }
